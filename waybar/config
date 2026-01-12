@@ -22,11 +22,7 @@
   ],
 
   "sway/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-      "focused": "",
-      "default": ""
-    }
+    "format": "{value}",
   },
 
   "bluetooth": {
