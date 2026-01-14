@@ -25,37 +25,6 @@
     "format": "{value}",
   },
 
-  "bluetooth": {
-    "format": "󰂲",
-    "format-on": "{icon}",
-    "format-off": "{icon}", 
-    "format-connected":"{icon}",
-    "format-icons":{
-        "on":"󰂯",
-        "off": "󰂲",
-        "connected": "󰂱",
-        },
-    "on-click": "blueman-manager",
-    "tooltip-format-connected":"{device_enumerate}"
-  },
-
-  "clock": {
-    "timezone": "Europe/Berlin",
-    "tooltip": false,
-    "format": "{:%H:%M:%S  -  %A, %d}",
-    "interval": 1
-  },
-
-  "network": {
-    "format-wifi": "󰤢",
-    "format-ethernet": "󰈀 ",
-    "format-disconnected": "󰤠 ",
-    "interval": 5,
-    "tooltip-format": "{essid} ({signalStrength}%)",
-    "on-click": "foot -e nmtui"
-
- },
-
   "cpu": {
     "interval": 1,
     "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
@@ -69,12 +38,13 @@
     "tooltip-format": "Memory"
   },
 
-  "backlight": {
-    "format": "{icon}  {percent}%",
-    "format-icons": ["","󰃜", "󰃛", "󰃞","󰃝","󰃟","󰃠"],
-    "tooltip": false
+  "clock": {
+    "timezone": "Europe/Berlin",
+    "tooltip": false,
+    "format": "{:%H:%M:%S  -  %A, %d}",
+    "interval": 1
   },
-  
+
   "pulseaudio": {
     "format": "{icon}  {volume}%",
     "format-muted": "",
@@ -82,6 +52,26 @@
       "default": ["", "", " "]
     },
     "on-click": "pavucontrol"
+  },
+
+  "backlight": {
+    "format": "{icon}  {percent}%",
+    "format-icons": ["","󰃜", "󰃛", "󰃞","󰃝","󰃟","󰃠"],
+    "tooltip": false
+  },
+  
+  "bluetooth": {
+    "format": "󰂲",
+    "format-on": "{icon}",
+    "format-off": "{icon}", 
+    "format-connected":"{icon}",
+    "format-icons":{
+        "on":"󰂯",
+        "off": "󰂲",
+        "connected": "󰂱",
+        },
+    "on-click": "blueman-manager",
+    "tooltip-format-connected":"{device_enumerate}"
   },
 
   "battery": {
@@ -101,6 +91,11 @@
     "format-icons": ["", "", "", "", ""]
   },
   
+  "tray": {
+    "icon-size": 18,
+    "spacing": 5
+  },
+
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
@@ -108,10 +103,5 @@
       "deactivated": "󰈉"
     },
     "tooltip": true
-  },
-
-  "tray": {
-    "icon-size": 18,
-    "spacing": 5
   },
 }
