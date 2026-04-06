@@ -7,12 +7,10 @@ install_data([
   install_dir: '/usr/lib/systemd/user/',
 )
 
-run_command(
-    'systemctl',
-    '--user',
-    'add-wants',
-    'sway-session.target',
-    'kanshi.service',
-    'swaync.service',
-    'swayidle.service',
-    check: true)
+foreach unit : ['kanshi.service', 'swaync.service', 'swayidle.service']
+  install_symlink(
+    unit,
+    pointing_to: '/usr/lib/systemd/user/' + unit,
+    install_dir: '/usr/lib/systemd/user/sway-session.target.wants',
+  )
+endforeach
