@@ -11,12 +11,8 @@ Run the desktop environment with `sway-session` command.
 Required applications:
 
 - sway
-- swayidle
-- swaylock
-- swaync
-- fuzzel
+- noctalia
 - foot
-- waybar
 - kanshi
 
 To install the configuration:

@@ -1,7 +1,5 @@
-install_data([
-    'background.jpg',
-    'config',
-  ],
+install_data(
+  'config',
   install_dir: join_paths(home_dir, 'sway'),
 )
 install_data('env', install_dir: '/etc/sway')
